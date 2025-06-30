@@ -9,13 +9,13 @@ install() {
 
   platform=$(uname)
   if [[ "$platform" == "Darwin" ]]; then
-    curl -fSL -JO https://github.com/ArthurSonzogni/Diagon/releases/download/${version}/diagon-${version#v}-Darwin.zip
+    echo curl -fSL -JO https://github.com/ArthurSonzogni/Diagon/releases/download/${version}/diagon-${version#v}-Darwin.zip
   elif [[ "$platform" == "Linux" ]]; then
     curl -fSL -JO https://github.com/ArthurSonzogni/Diagon/releases/download/${version}/diagon-${version#v}-Linux.zip
   fi
 
-  bsdtar -xf diagon*.zip
-  cp diagon*/bin/diagon-* $install_dir/bin/diagon
+  # bsdtar -xf diagon*.zip
+  # cp diagon*/bin/diagon-* $install_dir/bin/diagon
 }
 
 install $ASDF_INSTALL_TYPE $ASDF_INSTALL_VERSION $ASDF_INSTALL_PATH
