@@ -9,9 +9,9 @@ install() {
 
   platform=$(uname)
   if [[ "$platform" == "Darwin" ]]; then
-    echo curl -fSL -JO https://github.com/ArthurSonzogni/Diagon/releases/download/${version}/diagon-${version#v}-Darwin.zip
+    curl -fSL -JO https://github.com/ArthurSonzogni/Diagon/releases/download/v1.1.158/diagon-1.1.156-Darwin.zip
   elif [[ "$platform" == "Linux" ]]; then
-    curl -fSL -JO https://github.com/ArthurSonzogni/Diagon/releases/download/${version}/diagon-${version#v}-Linux.zip
+    curl -fSL -JO https://github.com/ArthurSonzogni/Diagon/releases/download/v1.1.158/diagon-1.1.156-Linux.zip
   fi
 
   # bsdtar -xf diagon*.zip
