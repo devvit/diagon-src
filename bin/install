@@ -14,8 +14,9 @@ install() {
     curl -fSL -JO https://github.com/ArthurSonzogni/Diagon/releases/download/v1.1.158/diagon-1.1.156-Linux.zip
   fi
 
-  # bsdtar -xf diagon*.zip
-  # cp diagon*/bin/diagon-* $install_dir/bin/diagon
+  bsdtar -xf diagon*.zip
+  mkdir -p $install_dir/bin
+  cp diagon*/bin/diagon-* $install_dir/bin/
 }
 
 install $ASDF_INSTALL_TYPE $ASDF_INSTALL_VERSION $ASDF_INSTALL_PATH
